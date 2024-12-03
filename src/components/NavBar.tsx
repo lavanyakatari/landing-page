@@ -1,26 +1,74 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const NavBar = () => {
+  const location = useLocation();
+
+  console.log("Location", location);
+
   return (
-    <nav className="flex items-center justify-between px-10 shadow-xl h-20  sticky top-0 bg-white">
+    <nav className="flex items-center justify-between px-10 shadow-xl h-20  sticky top-0 bg-white underline ">
       <div>
-        <NavLink to="/">LOGO</NavLink>
+        <NavLink
+          className={`${location.pathname === "/" && "text-red-500 font-bold"}`}
+          to="/"
+        >
+          Logo
+        </NavLink>
       </div>
       <div>
-        <ul className="flex  items-center gap-4">
+        <ul>
           <li>
-            <NavLink to="/" className={`active:font-bold active:text-red-500`}>
+            <NavLink
+              className={` ${
+                location.pathname === "/" && "text-red-500 font-bold"
+              } `}
+              to="/"
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink
+              className={`active:font-bold ${
+                location.pathname === "/about" && "text-red-500 font-bold"
+              } `}
+              to="/about"
+            >
+              About
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              className={`active:font-bold ${
+                location.pathname === "/array" && "text-red-500"
+              }`}
+              to="/array"
+            >
+              Array
+            </NavLink>
           </li>
         </ul>
       </div>
       <div>
-        <NavLink to="/register">Register</NavLink>
+        <ul></ul>
+        <NavLink
+          to="/register"
+          className={`active:font-bold ${
+            location.pathname === "/register" && "text-red-500 font-bold"
+          } `}
+        >
+          Register
+        </NavLink>
+        <NavLink
+          to="/login"
+          className={`active:font-bold ${
+            location.pathname === "/login" && "text-red-500 font-bold"
+          } `}
+        >
+          LoginPage
+        </NavLink>
       </div>
     </nav>
   );
