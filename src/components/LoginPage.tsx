@@ -19,7 +19,7 @@ export const LoginPage = () => {
 
   return (
     <form
-      className="p-4 w-[350px] space-y-6 rounded-lg shadow-xl border"
+      className="p-4 w-[350px] space-y-6 rounded-lg shadow-xl border bg-blue-300"
       onSubmit={handleSubmit}
     >
       <h1 className="text-center font-bold">LoginPage</h1>

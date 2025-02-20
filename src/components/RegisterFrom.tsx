@@ -95,7 +95,7 @@ export const RegisterFrom = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-[450px] flex flex-col shadow-xl p-2 space-y-6 rounded-lg "
+      className="w-[450px] flex flex-col shadow-xl p-2 space-y-6 rounded-lg bg-blue-300"
     >
       <h1 className="font-bold text-center text-3xl">Register</h1>
       {/* Username Field */}
