@@ -50,6 +50,14 @@ const NavBar = () => {
           >
             LoginPage
           </NavLink>
+          <NavLink
+            to="/resume"
+            className={`active:font-bold ${
+              location.pathname === "/resume" && "text-red-500 font-bold"
+            } `}
+          >
+            Resume
+          </NavLink>
         </ul>
       </div>
     </nav>
