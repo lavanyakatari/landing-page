@@ -7,7 +7,7 @@ const NavBar = () => {
   console.log("Location", location);
 
   return (
-    <nav className="flex items-center justify-between px-10 shadow-xl h-20  sticky top-0 bg-blue-200 underline ">
+    <nav className="flex items-center justify-between px-10 shadow-xl h-20  sticky top-0 bg-blue-200 bg-opacity-50 underline ">
       <div className="flex-row items-center gap-10">
         <ul className="flex space-x-10 place-items-center gap-10">
           <li>
@@ -32,7 +32,7 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      <div>
+      {/* <div>
         <ul className="flex space-x-10 place-items-center gap-10">
           <NavLink
             to="/register"
@@ -59,7 +59,7 @@ const NavBar = () => {
             Resume
           </NavLink>
         </ul>
-      </div>
+      </div> */}
     </nav>
   );
 };
