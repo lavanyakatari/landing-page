@@ -1,4 +1,3 @@
-import React from "react";
 import { Count } from "../../components/Count";
 
 const count = () => {

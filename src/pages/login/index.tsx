@@ -1,4 +1,3 @@
-import React from "react";
 import { LoginPage } from "../../components/LoginPage";
 import websiteImage from "../../assets/website.jpg";
 

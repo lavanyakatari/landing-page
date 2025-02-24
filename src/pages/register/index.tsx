@@ -1,4 +1,3 @@
-import React from "react";
 import { RegisterFrom } from "../../components/RegisterFrom";
 import websiteImage from "../../assets/website.jpg";
 const Register = () => {

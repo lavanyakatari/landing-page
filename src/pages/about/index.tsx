@@ -1,6 +1,5 @@
-// import React from "react";
-// import web from "../../assets/website.jpg";
-// import { StrictMode } from "react";
+import web from "../../assets/website.jpg";
+import { StrictMode } from "react";
 
 // const About = () => {
 //   const handleRedirect = (url: string) => {
@@ -44,7 +43,7 @@
 //               </span>
 //             </p>
 //           </div>
-//           <div className="w-[300px]  shadow-lg bg-gray-960 bg-opacity-75 p-6 rounded-2xl shadow-lg text-left max-w-2xl justify-center items-center mt-20"> 
+//           <div className="w-[300px]  shadow-lg bg-gray-960 bg-opacity-75 p-6 rounded-2xl shadow-lg text-left max-w-2xl justify-center items-center mt-20">
 //             <h2 className="text-2xl font-bold mb-4">EDUCATION</h2>
 //             {/* <h3 className="text-2xl font-semibold mb-2">
 //               Software Developer, FlyingFox Labs Pvt Ltd: Jun 2022 - Present
@@ -57,13 +56,13 @@
 //               <li>
 //                 ZPH School Velpur Year of Pass 2015
 //               </li>
-            
+
 //             </ul>
 //           </div>
 
 //         </div>
 //         <div className="w-1/2 p-6">
-//           <div className=" pl-8 pt-8 rounded-tl-8xl shadow-lg bg-gray-800 bg-opacity-75 p-6 rounded-2xl shadow-lg text-left max-w-2xl justify-center items-center mt-20"> 
+//           <div className=" pl-8 pt-8 rounded-tl-8xl shadow-lg bg-gray-800 bg-opacity-75 p-6 rounded-2xl shadow-lg text-left max-w-2xl justify-center items-center mt-20">
 //             <h2 className="text-3xl font-bold mb-4">EXPERIENCE</h2>
 //             {/* <h3 className="text-2xl font-semibold mb-2">
 //               Software Developer, FlyingFox Labs Pvt Ltd: Jun 2022 - Present
@@ -78,8 +77,8 @@
 //                 across devices.
 //               </li>
 //               <li>
-//                 I am familiary with Backend technologies nodejs,expressjs mongodb 
-//                 and i have basic knowledge on testing tool playwrite i am using 
+//                 I am familiary with Backend technologies nodejs,expressjs mongodb
+//                 and i have basic knowledge on testing tool playwrite i am using
 //                 this in my Raltime project for DiscordServer
 //                 </li>
 //               <li>
@@ -97,10 +96,6 @@
 // };
 
 // export default About;
-
-import React from "react";
-import web from "../../assets/website.jpg";
-import { StrictMode } from "react";
 
 const About = () => {
   const handleRedirect = (url: string) => {
@@ -138,7 +133,9 @@ const About = () => {
               <p className="text-sm text-blue-400 sm:text-xl md:text-sm">
                 GitLab:{" "}
                 <span
-                  onClick={() => handleRedirect("https://gitlab.com/lavanya_77")}
+                  onClick={() =>
+                    handleRedirect("https://gitlab.com/lavanya_77")
+                  }
                   className="underline hover:text-blue-400 cursor-pointer"
                 >
                   Visit my GitLab
@@ -168,10 +165,15 @@ const About = () => {
                   building and maintaining responsive web applications.
                 </li>
                 <li>
-                  I am familiar with backend technologies like Node.js, Express.js, MongoDB, and I have basic knowledge of testing tools such as Playwright (used in my real-time Discord server project).
+                  I am familiar with backend technologies like Node.js,
+                  Express.js, MongoDB, and I have basic knowledge of testing
+                  tools such as Playwright (used in my real-time Discord server
+                  project).
                 </li>
                 <li>
-                  Technical Documentation: Created comprehensive technical documentation to support development processes and ensure clarity in project progress and future enhancements.
+                  Technical Documentation: Created comprehensive technical
+                  documentation to support development processes and ensure
+                  clarity in project progress and future enhancements.
                 </li>
               </ul>
             </div>
@@ -183,4 +185,3 @@ const About = () => {
 };
 
 export default About;
-

@@ -1,4 +1,3 @@
-import React from "react";
 import websiteImage from "../../assets/website.jpg";
 
 const Resume = () => {
