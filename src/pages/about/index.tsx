@@ -1,6 +1,7 @@
 import web from "../../assets/website.jpg";
 import { StrictMode, useState } from "react";
 import { FaGithub, FaGitlab } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 
 const About = () => {
   const [showEducation, setShowEducation] = useState(false);
@@ -36,27 +37,29 @@ const About = () => {
                 onClick={() =>
                   handleRedirect("https://github.com/lavanyakatari")
                 }
-                className="p-3 bg-gray-700 rounded-full hover:bg-blue-500 transition duration-300 cursor-pointer"
+                className="p-3 bg-gray-700 rounded-full hover:bg-blue-500 hover:animate-ping transition duration-300 cursor-pointer"
               >
                 <FaGithub className="size-7" />
               </span>
 
               <span
                 onClick={() => handleRedirect("https://gitlab.com/lavanya_77")}
-                className="p-3 bg-gray-700 rounded-full hover:bg-orange-500 transition duration-300 cursor-pointer"
+                className="p-3 bg-gray-700 rounded-full hover:bg-orange-500 hover:animate-spin transition duration-300 cursor-pointer"
               >
                 <FaGitlab className="size-7" />
               </span>
             </div>
 
             {/* Education Section */}
-            <div className="w-full bg-gray-700 bg-opacity-75 p-5 rounded-lg shadow-lg">
+            <div className="w-full bg-gray-700 bg-opacity-75 p-5 rounded-3xl shadow-lg sm:skew-x-[-10deg] md:skew-x-[-10deg]">
               <h2
-                className="text-2xl font-bold mb-3 cursor-pointer flex justify-between items-center"
+                className="text-xl italic font-bold mb-3 cursor-pointer flex justify-between items-center"
                 onClick={() => setShowEducation(!showEducation)}
               >
                 EDUCATION
-                <span className="text-lg">{showEducation ? "▲" : "▼"}</span>
+                <span className="text-lg">
+                  {showEducation ? <FaAngleUp /> : <FaAngleDown />}
+                </span>
               </h2>
               {showEducation && (
                 <div className="text-gray-300 text-sm space-y-2">
@@ -75,13 +78,15 @@ const About = () => {
           {/* Right Section */}
           <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
             {/* Experience Section */}
-            <div className="bg-gray-700 bg-opacity-75 p-5 rounded-lg shadow-lg">
+            <div className="bg-gray-700 bg-opacity-75 p-5 rounded-3xl shadow-lg sm:skew-x-[-10deg] md:skew-x-[-10deg] ">
               <h2
-                className="text-2xl font-bold mb-3 cursor-pointer flex justify-between items-center"
+                className="text-xl italic font-bold mb-3 cursor-pointer flex justify-between items-center"
                 onClick={() => setShowExperience(!showExperience)}
               >
                 EXPERIENCE
-                <span className="text-lg">{showExperience ? "▲" : "▼"}</span>
+                <span className="text-lg">
+                  {showExperience ? <FaAngleUp /> : <FaAngleDown />}
+                </span>
               </h2>
               {showExperience && (
                 <div className="text-gray-300 text-sm space-y-2">

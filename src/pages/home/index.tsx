@@ -1,6 +1,5 @@
 import React from "react";
 import { IoIosPhonePortrait } from "react-icons/io";
-
 import websiteImage from "../../assets/website.jpg";
 import profileImage from "../../assets/profile.jpeg";
 
@@ -22,7 +21,7 @@ const Home = () => {
               <p className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full transition duration-300 shadow-md text-base sm:text-lg md:text-xl lg:text-2xl mt-3 flex items-center">
                 <IoIosPhonePortrait className="mr-2" /> Contact
               </p>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mt-3">
+              <p className="text-xs font-Monospace italic sm:text-lg md:text-xl lg:text-xl mt-3">
                 Email:{" "}
                 <a
                   href="mailto:katarilavanya881@gmail.com"

@@ -1,4 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
+import logo from "../assets/profile.jpeg";
+import { CgProfile } from "react-icons/cg";
 
 const NavBar = () => {
   const location = useLocation();
@@ -16,7 +18,7 @@ const NavBar = () => {
               } `}
               to="/"
             >
-              Home
+              <CgProfile className="size-10 rounded-full border-2 border-gray-800" />
             </NavLink>
           </li>
           <li>
@@ -31,94 +33,8 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      {/* <div>
-        <ul className="flex space-x-10 place-items-center gap-10">
-          <NavLink
-            to="/register"
-            className={`active:font-bold ${
-              location.pathname === "/register" && "text-red-500 font-bold"
-            } `}
-          >
-            Register
-          </NavLink>
-          <NavLink
-            to="/login"
-            className={`active:font-bold ${
-              location.pathname === "/login" && "text-red-500 font-bold"
-            } `}
-          >
-            LoginPage
-          </NavLink>
-          <NavLink
-            to="/resume"
-            className={`active:font-bold ${
-              location.pathname === "/resume" && "text-red-500 font-bold"
-            } `}
-          >
-            Resume
-          </NavLink>
-        </ul>
-      </div> */}
     </nav>
   );
 };
 
 export default NavBar;
-// import React from "react";
-// import { useLocation, NavLink } from "react-router-dom";
-
-// const NavBar = () => {
-//   const location = useLocation();
-//   return (
-//     <nav className="flex items-center justify-between shadow-xl px-10 h-20 sticky top-2 bg-white underline">
-//       <div>
-//         <NavLink
-//           className={`${location.pathname === "/" && "text-red-500 font-bold"}`}
-//           to="/"
-//         >
-//           Logo
-//         </NavLink>
-//       </div>
-//       <div>
-//         <NavLink
-//           className={`${location.pathname === "/" && "text-red-500 font-bold"}`}
-//           to="/"
-//         >
-//           Home
-//         </NavLink>
-//       </div>
-
-//       <div>
-//         <NavLink
-//           className={`${
-//             location.pathname === "/login" && "text-red-500 font-bold"
-//           }`}
-//           to="/login"
-//         >
-//           Login
-//         </NavLink>
-//         <NavLink
-//           className={`${
-//             location.pathname === "/Register" && "text-red-500 font-bold"
-//           }`}
-//           to="/register"
-//         >
-//           {" "}
-//           Register
-//         </NavLink>
-//       </div>
-//       <div>
-//         <NavLink
-//           className={`${
-//             location.pathname === "/array" && "text-red-500 font-bold"
-//           }`}
-//           to="/array"
-//         >
-//           Array
-//         </NavLink>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default NavBar;
