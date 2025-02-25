@@ -1,5 +1,4 @@
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "../assets/profile.jpeg";
 import { CgProfile } from "react-icons/cg";
 
 const NavBar = () => {
