@@ -47,7 +47,7 @@ const Home = () => {
               <img
                 src={profileImage}
                 alt="Profile"
-                className="w-32 h-32 md:w-48 md:h-48 rounded-full border-2 border-blue-500"
+                className="flex hover:animate-pulse w-32 h-32 md:w-48 md:h-48 rounded-full border-2 border-blue-500"
               />
             </div>
           </div>
