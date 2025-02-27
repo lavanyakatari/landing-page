@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IoIosPhonePortrait } from "react-icons/io";
 import websiteImage from "../../assets/website.jpg";
 import profileImage from "../../assets/profile.jpeg";
+import "./style.css";
+import ThemeContext from "../../ThemeContext";
 
 const Home = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <React.StrictMode>
-      <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800">
+      <div
+        className={`flex flex-col justify-center items-center min-h-screen bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 ${
+          theme === "dark" ? "dark" : ""
+        }`}
+      >
         <div className="relative w-full h-full flex flex-col md:flex-row items-center justify-center">
           <img
             src={websiteImage}
