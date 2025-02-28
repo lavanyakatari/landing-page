@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import About from "./pages/about";
 import { Routes, Route } from "react-router-dom";
 import Contact from "./pages/contact";
+
 const App = () => {
   return (
     <div>
