@@ -10,15 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.7.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "axios": "^1.8.1",
+    "dotenv": "^16.4.7",
+    "emailjs-com": "^3.2.0",
+    "next": "^15.2.0",
+    "nodemailer": "^6.10.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.28.0",
     "tamagui": "^1.125.14"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.5.0",

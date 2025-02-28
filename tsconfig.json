@@ -5,6 +5,15 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "types": ["tamagui"]
+    "types": ["tamagui"],
+    "module": "ESNext", // Use ESNext module system
+    "esModuleInterop": true, // Allow default imports from modules with no default export
+    "moduleResolution": "Node",
+    "target": "ES6",
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   }
+
+  
 }
