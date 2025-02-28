@@ -52,9 +52,9 @@ const About = () => {
             </div>
 
             {/* Education Section */}
-            <div className="w-full hover:animate-pulse bg-gray-700 bg-opacity-75 p-5 rounded-3xl shadow-lg sm:skew-x-[-10deg] md:skew-x-[-10deg]">
+            <div className="w-full hover:animate-pulse bg-gray-900 bg-opacity-75 p-5 rounded-xl shadow-lg sm:skew-x-[-10deg] md:skew-x-[-10deg]">
               <h2
-                className="text-xl italic font-bold mb-3 cursor-pointer flex justify-between items-center"
+                className="underline border-gray-700 text-xl italic font-bold mb-3 cursor-pointer flex justify-between items-center"
                 onClick={() => setShowEducation(!showEducation)}
               >
                 EDUCATION
@@ -63,7 +63,7 @@ const About = () => {
                 </span>
               </h2>
               {showEducation && (
-                <div className="text-gray-300 text-sm space-y-2">
+                <div className="text-gray-300 text-sm space-y-2 border-t-2 border-b-1 border-gray-600">
                   <ul className="list-disc list-inside">
                     <li>
                       B.Tech (CSE) Thirumal Engineering College - Year of
@@ -83,9 +83,9 @@ const About = () => {
           {/* Right Section */}
           <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
             {/* Experience Section */}
-            <div className="bg-gray-700 hover:animate-pulse bg-opacity-75 p-5 rounded-3xl shadow-lg">
+            <div className="bg-gray-900 border-t-2 border-b-2 border-l-2 border-r-2 border-gray-700 hover:animate-pulse bg-opacity-75 p-5 rounded-xl shadow-lg">
               <h2
-                className="text-xl italic font-bold mb-3 cursor-pointer flex justify-between items-center"
+                className="underline   border-gray-700 text-xl italic font-bold mb-3 cursor-pointer flex justify-between items-center"
                 onClick={() => setShowExperience(!showExperience)}
               >
                 EXPERIENCE
@@ -178,7 +178,7 @@ const About = () => {
             </div>
 
             {/* FlyingFoPvt Section */}
-            <div className="bg-gray-700 hover:animate-pulse bg-opacity-75 p-5 rounded-3xl shadow-lg mt-8">
+            <div className="bg-gray-900 hover:animate-pulse bg-opacity-75 p-5 rounded-3xl shadow-lg mt-8">
               <h2
                 className="text-xl italic font-bold mb-3 cursor-pointer flex justify-between items-center underline"
                 onClick={() => setShowFlyingFoPvt(!showFlyingFoPvt)}
@@ -189,12 +189,23 @@ const About = () => {
                 </span> */}
               </h2>
               {showFlyingFoPvt && (
-                <div className="space-y-2">
-                  <p className="font-bold">Work Experience at FlyingFoPvt</p>
+                <div className="space-y-2 text-gray-300 text-sm bg-gray-800 bg-opacity-75 p-5 rounded-3xl shadow-lg">
+                  <p className="font-bold">
+                    Work Experience at FlyingFoxLabs Pvt
+                  </p>
                   <p>
-                    Worked as a React Developer for 3 years at FlyingFoPvt,
-                    where I contributed to various projects, enhancing the user
-                    interface and user experience of web applications.
+                    Worked as a React Developer for 3 years at FlyingFoxLabsPvt,
+                    where I focused on creating reusable components and screens
+                    using higher-order components (HOCs) and functional
+                    components. HOCs are functions that take a component and
+                    return an enhanced version of it, allowing code reusability
+                    by adding common functionality (like authentication, loading
+                    states, logging) without changing the original component.
+                    for creating components we are using Tamagui library. manage
+                    states, which enhanced the user interface and user
+                    experience of web applications. Additionally, I contributed
+                    to various projects, ensuring smooth development processes
+                    and high-quality deliverables.
                   </p>
                 </div>
               )}

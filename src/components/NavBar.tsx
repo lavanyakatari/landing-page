@@ -17,12 +17,8 @@ const NavBar = () => {
 
   return (
     <nav className="p-4 shadow-md bg-white dark:bg-gray-900 dark:text-white flex justify-between">
-      <h1 className="text-lg font-bold">Theme Switcher</h1>
-      <button
-        onClick={toggleTheme}
-        className="px-4 py-2 border rounded dark:border-white border-black"
-      >
-        {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+      <button onClick={toggleTheme} className="px-4 py-2 rounded">
+        {theme === "light" ? "🌙" : "☀️"}
       </button>
       <div className="flex-row items-center gap-10">
         <ul className="flex space-x-10 place-items-center gap-10">
@@ -44,6 +40,16 @@ const NavBar = () => {
               to="/about"
             >
               About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={`active:font-bold ${
+                location.pathname === "/contact" && "text-red-500 font-bold"
+              } `}
+              to="/contact"
+            >
+              Contact
             </NavLink>
           </li>
         </ul>
