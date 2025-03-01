@@ -1,95 +1,113 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [status, setStatus] = useState<string | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('Sending...');
+    setStatus("Sending...");
 
     emailjs
       .sendForm(
-        'service_1oylkfn', // EmailJS service ID
-        'template_s2b2fvt', // EmailJS template ID
+        "service_1oylkfn", // EmailJS service ID
+        "template_s2b2fvt", // EmailJS template ID
         e.target as HTMLFormElement, // The form element
-        'JNrb0w2xoure8cDNU' // Your EmailJS user ID
+        "JNrb0w2xoure8cDNU" // Your EmailJS user ID
       )
       .then(
         (result: { text: string; status: number }) => {
           console.log(result.text);
-          setStatus('Message sent successfully!');
-          setFormData({ name: '', email: '', message: '' });
+          setStatus("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+          (e.target as HTMLFormElement).reset(); // Reset the form
         },
         (error: { text: string; status: number }) => {
           console.log(error.text);
-          setStatus('Failed to send message.');
+          setStatus("Failed to send message.");
         }
       );
-      
   };
 
   return (
-    <div className="min-h-screen bg-blue-900  flex justify-center items-center bg-gray-50 p-6">
-      <div className="w-full max-w-md p-8 bg-gray-300 bg-opacity-40 rounded-lg shadow-lg">
-        <h1 className="text-2xl font-semibold text-center mb-6 text-gray-800">Contact Me For Any Requriment</h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <motion.div
+      className="min-h-screen bg-gradient-to-r from-blue-900 to-blue-800 opacity-75 flex justify-center items-center p-6"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.div
+        className="w-full max-w-lg p-10 bg-white bg-opacity-90 rounded-xl shadow-2xl"
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", stiffness: 100 }}
+      >
+        <h1 className="text-3xl font-bold text-center mb-8 text-gray-900">
+          Contact Me
+        </h1>
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-gray-200 font-medium mb-2">Name:</label>
+            <label className="block text-gray-700 font-medium mb-2">
+              Name:
+            </label>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
             />
           </div>
           <div>
-            <label className="block text-gray-200 font-medium mb-2">Email:</label>
+            <label className="block text-gray-700 font-medium mb-2">
+              Email:
+            </label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
             />
           </div>
           <div>
-            <label className="block text-gray-200 font-medium mb-2">Message:</label>
+            <label className="block text-gray-700 font-medium mb-2">
+              Message:
+            </label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
             />
           </div>
           <button
             type="submit"
-            className="w-full py-2 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+            className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-500 transition duration-300"
           >
             Send Message
           </button>
         </form>
-        {status && <p className="mt-4 text-center text-gray-600">{status}</p>}
-      </div>
-    </div>
+        {status && <p className="mt-6 text-center text-gray-700">{status}</p>}
+      </motion.div>
+    </motion.div>
   );
 };
 
 export default Contact;
-
-
-
