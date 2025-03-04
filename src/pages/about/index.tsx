@@ -4,6 +4,7 @@ import { FaGithub, FaGitlab } from "react-icons/fa";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
+
 const About = () => {
   const [showEducation, setShowEducation] = useState(false);
   const [showExperience, setShowExperience] = useState(false);

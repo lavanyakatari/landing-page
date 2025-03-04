@@ -1,21 +1,24 @@
 import React, { useContext } from "react";
-import { IoIosPhonePortrait } from "react-icons/io";
 import websiteImage from "../../assets/web-page1.jpg";
 import profileImage from "../../assets/profile.jpeg";
-import "./style.css";
-import ThemeContext from "../../ThemeContext";
+import { ThemeContext } from "../../ThemeContext";
+import { MdOutlineEmail } from "react-icons/md";
 
+import "./style.css";
 const Home = () => {
-  const { theme } = useContext(ThemeContext);
+  const themeContext = useContext(ThemeContext);
+  const theme = themeContext ? themeContext.theme : "light";
 
   return (
     <React.StrictMode>
       <div
-        className={`flex flex-col justify-center items-center min-h-screen bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 ${
-          theme === "dark" ? "dark" : ""
+        className={`flex flex-col justify-center items-center min-h-screen ${
+          theme === "dark"
+            ? "bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800"
+            : "bg-gradient-to-r from-white via-gray-100 to-white"
         }`}
       >
-        <div className="relative w-full h-full flex flex-col md:flex-row items-center justify-center ">
+        <div className="relative w-full h-full flex flex-col md:flex-row items-center justify-center">
           <img
             src={websiteImage}
             alt="Website"
@@ -26,26 +29,27 @@ const Home = () => {
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold animate-bounce">
                 Lavanya Katari
               </h1>
-              <p className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full transition duration-500 ease-in-out transform hover:scale-105 shadow-md text-base sm:text-lg md:text-xl lg:text-2xl mt-3 flex items-center">
-                <IoIosPhonePortrait className="mr-2" /> Contact
-              </p>
-              <p className="text-xs font-Monospace italic sm:text-lg md:text-xl lg:text-xl mt-3">
-                Email:{" "}
+
+              <p className="flex flex-row text-xs font-mono italic sm:text-lg md:text-xl lg:text-xl mt-3 items-center bg-gray-800 p-4 rounded-lg shadow-lg">
+                <MdOutlineEmail
+                  size={40}
+                  className="mr-2 text-blue-500 bg-gray-900 rounded-full p-2"
+                />
                 <a
                   href="mailto:katarilavanya881@gmail.com"
-                  className="underline hover:text-blue-400 transition duration-300 ease-in-out"
+                  className="underline text-blue-300 hover:text-blue-500 transition duration-300 ease-in-out"
                 >
                   katarilavanya881@gmail.com
                 </a>
               </p>
-              <div className="mt-10">
+              <div className="mt-10 flex justify-center">
                 <button
                   onClick={() =>
                     window.open(
                       "https://drive.google.com/file/d/1LXha0dLFTFxObj4yGvDRwH2JhHANKTyE/view?usp=sharing"
                     )
                   }
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full transition duration-500 ease-in-out transform hover:scale-105 shadow-md"
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-full transition duration-500 ease-in-out transform hover:scale-110 shadow-lg text-lg font-semibold"
                 >
                   View Resume
                 </button>
@@ -55,7 +59,7 @@ const Home = () => {
               <img
                 src={profileImage}
                 alt="Profile"
-                className="flex hover:animate-spin w-32 h-32 md:w-48 md:h-48 rounded-full border-2 border-blue-500 transition duration-500 ease-in-out transform hover:scale-110 "
+                className="flex hover:animate-spin w-32 h-32 md:w-48 md:h-48 rounded-full border-2 border-blue-500 transition duration-500 ease-in-out transform hover:scale-110"
               />
             </div>
           </div>
