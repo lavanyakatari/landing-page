@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
-import web from "../../assets/website.jpg";
+import web from "../../assets/web-page1.jpg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -60,9 +60,9 @@ const Contact = () => {
       </div>
       <motion.div
         className="w-full max-w-lg p-10 bg-white bg-opacity-80 rounded-3xl shadow-2xl backdrop-blur-md"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ type: "spring", stiffness: 100 }}
+        initial={{ x: -300 }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", stiffness: 100, damping: 30 }}
       >
         <h1 className="text-4xl font-extrabold text-center mb-8 text-gray-900">
           Get in Touch

@@ -13,8 +13,6 @@ const NavBar = () => {
 
   const { theme, toggleTheme } = themeContext;
 
-  console.log("Location", location);
-
   return (
     <nav className="p-4 shadow-md bg-white dark:bg-gray-900 dark:text-white flex justify-between">
       <button onClick={toggleTheme} className="px-4 py-2 rounded">

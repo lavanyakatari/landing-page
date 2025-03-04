@@ -1,7 +1,8 @@
-import web from "../../assets/website.jpg";
+import web from "../../assets/web-page1.jpg";
 import { StrictMode, useState } from "react";
 import { FaGithub, FaGitlab } from "react-icons/fa";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [showEducation, setShowEducation] = useState(false);
@@ -52,7 +53,17 @@ const About = () => {
             </div>
 
             {/* Education Section */}
-            <div className="w-full hover:animate-pulse bg-gray-900 bg-opacity-75 p-5 rounded-xl shadow-lg sm:skew-x-[-10deg] md:skew-x-[-10deg]">
+            <motion.div
+              initial={{ x: -300 }}
+              animate={{ x: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 30,
+                delay: 0.8,
+              }}
+              className="w-full hover:animate-pulse bg-gray-900 bg-opacity-75 p-5 rounded-xl shadow-lg sm:skew-x-[-10deg] md:skew-x-[-10deg]"
+            >
               <h2
                 className="underline border-gray-700 text-xl italic font-bold mb-3 cursor-pointer flex justify-between items-center"
                 onClick={() => setShowEducation(!showEducation)}
@@ -77,13 +88,22 @@ const About = () => {
                   </ul>
                 </div>
               )}
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Section */}
           <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
             {/* Experience Section */}
-            <div className="bg-gray-900 border-t-2 border-b-2 border-l-2 border-r-2 border-gray-700 hover:animate-pulse bg-opacity-75 p-5 rounded-xl shadow-lg">
+            <motion.div
+              initial={{ x: -300 }}
+              animate={{ x: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 30,
+              }}
+              className="bg-gray-900 border-t-2 border-b-2 border-l-2 border-r-2 border-gray-700 hover:animate-pulse bg-opacity-75 p-5 rounded-xl shadow-lg"
+            >
               <h2
                 className="underline   border-gray-700 text-xl italic font-bold mb-3 cursor-pointer flex justify-between items-center"
                 onClick={() => setShowExperience(!showExperience)}
@@ -175,10 +195,20 @@ const About = () => {
                   </div>
                 </div>
               )}
-            </div>
+            </motion.div>
 
             {/* FlyingFoPvt Section */}
-            <div className="bg-gray-900 hover:animate-pulse bg-opacity-75 p-5 rounded-3xl shadow-lg mt-8">
+            <motion.div
+              initial={{ x: -300 }}
+              animate={{ x: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 30,
+                delay: 0.5,
+              }}
+              className="bg-gray-900 hover:animate-pulse bg-opacity-75 p-5 rounded-3xl shadow-lg mt-8"
+            >
               <h2
                 className="text-xl italic font-bold mb-3 cursor-pointer flex justify-between items-center underline"
                 onClick={() => setShowFlyingFoPvt(!showFlyingFoPvt)}
@@ -209,7 +239,7 @@ const About = () => {
                   </p>
                 </div>
               )}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
